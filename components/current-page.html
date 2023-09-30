@@ -1,0 +1,18 @@
+<custom-element name="adp-currentpage">
+	<element-attr name="page" type="string">home</element-attr>
+	<element-flow>
+		<listen-event attrchanged>
+			<script type="module/realm" use="localState, globalState, event,attr">
+				globalState.set('currentpage', attr.get('page').substr(1));
+			</script>
+		</listen-event>
+		<listen-event mounted>
+			<script type="module/realm" use="localState, globalState, event, attr">
+				globalState.set('currentpage', attr.get('page').substr(1));
+			</script>
+		</listen-event>
+	</element-flow>
+	<template>
+		<div></div>
+	</template>
+</custom-element>

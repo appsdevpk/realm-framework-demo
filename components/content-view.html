@@ -1,0 +1,13 @@
+<custom-element name="adp-contentview">
+	<template>
+		<is-visible _value:global="#currentpage" eq="home">
+			<home-page></home-page>
+		</is-visible>
+		<is-visible _value:global="#currentpage" eq="about">
+			<about-page></about-page>
+		</is-visible>
+		<is-visible _value:global="#currentpage" eq="contact">
+			<contact-page></contact-page>
+		</is-visible>
+	</template>
+</custom-element>
